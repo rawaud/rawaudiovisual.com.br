@@ -1,0 +1,732 @@
+{
+ "origem": "originais/IMG_8360.MOV",
+ "segmentos": [
+  {
+   "de": 0.0,
+   "ate": 5.968
+  },
+  {
+   "de": 6.219,
+   "ate": 20.003
+  },
+  {
+   "de": 20.38,
+   "ate": 27.587
+  },
+  {
+   "de": 27.963,
+   "ate": 34.654
+  },
+  {
+   "de": 35.035,
+   "ate": 40.453
+  },
+  {
+   "de": 40.735,
+   "ate": 46.054
+  }
+ ],
+ "duracao": 44.387,
+ "palavras": [
+  {
+   "texto": "Eu",
+   "inicio": 0.0,
+   "fim": 0.34
+  },
+  {
+   "texto": "não",
+   "inicio": 0.34,
+   "fim": 0.5
+  },
+  {
+   "texto": "vendo",
+   "inicio": 0.5,
+   "fim": 0.86
+  },
+  {
+   "texto": "mais",
+   "inicio": 0.86,
+   "fim": 1.38
+  },
+  {
+   "texto": "só",
+   "inicio": 1.38,
+   "fim": 1.9
+  },
+  {
+   "texto": "um",
+   "inicio": 1.9,
+   "fim": 2.02
+  },
+  {
+   "texto": "post,",
+   "inicio": 2.02,
+   "fim": 2.22
+  },
+  {
+   "texto": "e",
+   "inicio": 2.74,
+   "fim": 2.98
+  },
+  {
+   "texto": "não",
+   "inicio": 2.98,
+   "fim": 3.06
+  },
+  {
+   "texto": "é",
+   "inicio": 3.06,
+   "fim": 3.16
+  },
+  {
+   "texto": "porque",
+   "inicio": 3.16,
+   "fim": 3.28
+  },
+  {
+   "texto": "eu",
+   "inicio": 3.28,
+   "fim": 3.38
+  },
+  {
+   "texto": "não",
+   "inicio": 3.38,
+   "fim": 3.46
+  },
+  {
+   "texto": "quero",
+   "inicio": 3.46,
+   "fim": 3.68
+  },
+  {
+   "texto": "fazer,",
+   "inicio": 3.68,
+   "fim": 4.04
+  },
+  {
+   "texto": "é",
+   "inicio": 4.44,
+   "fim": 4.6
+  },
+  {
+   "texto": "porque",
+   "inicio": 4.6,
+   "fim": 4.78
+  },
+  {
+   "texto": "eu",
+   "inicio": 4.78,
+   "fim": 4.86
+  },
+  {
+   "texto": "entendi",
+   "inicio": 4.86,
+   "fim": 5.12
+  },
+  {
+   "texto": "uma",
+   "inicio": 5.12,
+   "fim": 5.32
+  },
+  {
+   "texto": "coisa,",
+   "inicio": 5.32,
+   "fim": 5.8
+  },
+  {
+   "texto": "uma",
+   "inicio": 5.969,
+   "fim": 6.229
+  },
+  {
+   "texto": "artezinha",
+   "inicio": 6.229,
+   "fim": 6.769
+  },
+  {
+   "texto": "sozinha,",
+   "inicio": 6.769,
+   "fim": 7.409
+  },
+  {
+   "texto": "um",
+   "inicio": 7.589,
+   "fim": 7.629
+  },
+  {
+   "texto": "vídeo",
+   "inicio": 7.629,
+   "fim": 7.889
+  },
+  {
+   "texto": "solto,",
+   "inicio": 7.889,
+   "fim": 8.509
+  },
+  {
+   "texto": "não",
+   "inicio": 8.629,
+   "fim": 8.749
+  },
+  {
+   "texto": "te",
+   "inicio": 8.749,
+   "fim": 8.869
+  },
+  {
+   "texto": "entrega",
+   "inicio": 8.869,
+   "fim": 9.369
+  },
+  {
+   "texto": "o",
+   "inicio": 9.369,
+   "fim": 9.549
+  },
+  {
+   "texto": "que",
+   "inicio": 9.549,
+   "fim": 9.649
+  },
+  {
+   "texto": "você",
+   "inicio": 9.649,
+   "fim": 9.929
+  },
+  {
+   "texto": "realmente",
+   "inicio": 9.929,
+   "fim": 10.269
+  },
+  {
+   "texto": "quer.",
+   "inicio": 10.269,
+   "fim": 10.649
+  },
+  {
+   "texto": "E",
+   "inicio": 11.069,
+   "fim": 11.269
+  },
+  {
+   "texto": "a",
+   "inicio": 11.269,
+   "fim": 11.329
+  },
+  {
+   "texto": "maioria",
+   "inicio": 11.329,
+   "fim": 11.489
+  },
+  {
+   "texto": "das",
+   "inicio": 11.489,
+   "fim": 11.709
+  },
+  {
+   "texto": "clientes",
+   "inicio": 11.709,
+   "fim": 12.049
+  },
+  {
+   "texto": "chega",
+   "inicio": 12.049,
+   "fim": 12.489
+  },
+  {
+   "texto": "me",
+   "inicio": 12.489,
+   "fim": 12.669
+  },
+  {
+   "texto": "falando",
+   "inicio": 12.669,
+   "fim": 12.989
+  },
+  {
+   "texto": "que",
+   "inicio": 12.989,
+   "fim": 13.289
+  },
+  {
+   "texto": "quer",
+   "inicio": 13.289,
+   "fim": 13.429
+  },
+  {
+   "texto": "mais",
+   "inicio": 13.429,
+   "fim": 13.609
+  },
+  {
+   "texto": "resultado,",
+   "inicio": 13.609,
+   "fim": 13.969
+  },
+  {
+   "texto": "mais",
+   "inicio": 14.629,
+   "fim": 14.809
+  },
+  {
+   "texto": "seguidor,",
+   "inicio": 14.809,
+   "fim": 15.329
+  },
+  {
+   "texto": "quer",
+   "inicio": 15.849,
+   "fim": 16.009
+  },
+  {
+   "texto": "clientes",
+   "inicio": 16.009,
+   "fim": 16.609
+  },
+  {
+   "texto": "que",
+   "inicio": 16.609,
+   "fim": 16.649
+  },
+  {
+   "texto": "estão",
+   "inicio": 16.649,
+   "fim": 16.689
+  },
+  {
+   "texto": "chegando",
+   "inicio": 16.689,
+   "fim": 16.989
+  },
+  {
+   "texto": "no",
+   "inicio": 16.989,
+   "fim": 17.109
+  },
+  {
+   "texto": "WhatsApp,",
+   "inicio": 17.109,
+   "fim": 17.809
+  },
+  {
+   "texto": "quer",
+   "inicio": 18.069,
+   "fim": 18.209
+  },
+  {
+   "texto": "que",
+   "inicio": 18.209,
+   "fim": 18.289
+  },
+  {
+   "texto": "o",
+   "inicio": 18.289,
+   "fim": 18.549
+  },
+  {
+   "texto": "faturamento",
+   "inicio": 18.549,
+   "fim": 19.069
+  },
+  {
+   "texto": "aumente.",
+   "inicio": 19.069,
+   "fim": 19.549
+  },
+  {
+   "texto": "Só",
+   "inicio": 19.892,
+   "fim": 20.192
+  },
+  {
+   "texto": "que",
+   "inicio": 20.192,
+   "fim": 20.292
+  },
+  {
+   "texto": "um",
+   "inicio": 20.292,
+   "fim": 20.392
+  },
+  {
+   "texto": "post",
+   "inicio": 20.392,
+   "fim": 20.632
+  },
+  {
+   "texto": "isolado",
+   "inicio": 20.632,
+   "fim": 21.132
+  },
+  {
+   "texto": "não",
+   "inicio": 21.132,
+   "fim": 21.352
+  },
+  {
+   "texto": "faz",
+   "inicio": 21.352,
+   "fim": 21.592
+  },
+  {
+   "texto": "isso,",
+   "inicio": 21.592,
+   "fim": 22.012
+  },
+  {
+   "texto": "ele",
+   "inicio": 22.192,
+   "fim": 22.352
+  },
+  {
+   "texto": "aparece",
+   "inicio": 22.352,
+   "fim": 22.792
+  },
+  {
+   "texto": "pra",
+   "inicio": 22.792,
+   "fim": 23.052
+  },
+  {
+   "texto": "pessoa,",
+   "inicio": 23.052,
+   "fim": 23.492
+  },
+  {
+   "texto": "some",
+   "inicio": 23.832,
+   "fim": 24.172
+  },
+  {
+   "texto": "e",
+   "inicio": 24.172,
+   "fim": 24.652
+  },
+  {
+   "texto": "na",
+   "inicio": 24.652,
+   "fim": 24.752
+  },
+  {
+   "texto": "semana",
+   "inicio": 24.752,
+   "fim": 25.092
+  },
+  {
+   "texto": "seguinte",
+   "inicio": 25.092,
+   "fim": 25.452
+  },
+  {
+   "texto": "você",
+   "inicio": 25.452,
+   "fim": 25.932
+  },
+  {
+   "texto": "está",
+   "inicio": 25.932,
+   "fim": 26.072
+  },
+  {
+   "texto": "no",
+   "inicio": 26.072,
+   "fim": 26.192
+  },
+  {
+   "texto": "mesmo",
+   "inicio": 26.192,
+   "fim": 26.352
+  },
+  {
+   "texto": "lugar.",
+   "inicio": 26.352,
+   "fim": 26.752
+  },
+  {
+   "texto": "Por",
+   "inicio": 26.752,
+   "fim": 27.156
+  },
+  {
+   "texto": "isso,",
+   "inicio": 27.156,
+   "fim": 27.536
+  },
+  {
+   "texto": "você",
+   "inicio": 27.656,
+   "fim": 27.856
+  },
+  {
+   "texto": "não",
+   "inicio": 27.856,
+   "fim": 27.956
+  },
+  {
+   "texto": "precisa",
+   "inicio": 27.956,
+   "fim": 28.156
+  },
+  {
+   "texto": "de",
+   "inicio": 28.156,
+   "fim": 28.456
+  },
+  {
+   "texto": "mais",
+   "inicio": 28.456,
+   "fim": 28.836
+  },
+  {
+   "texto": "um",
+   "inicio": 28.836,
+   "fim": 29.116
+  },
+  {
+   "texto": "post,",
+   "inicio": 29.116,
+   "fim": 29.316
+  },
+  {
+   "texto": "você",
+   "inicio": 29.596,
+   "fim": 29.796
+  },
+  {
+   "texto": "precisa",
+   "inicio": 29.796,
+   "fim": 30.076
+  },
+  {
+   "texto": "de",
+   "inicio": 30.076,
+   "fim": 30.236
+  },
+  {
+   "texto": "estratégia",
+   "inicio": 30.236,
+   "fim": 30.976
+  },
+  {
+   "texto": "de",
+   "inicio": 30.976,
+   "fim": 31.176
+  },
+  {
+   "texto": "alguém",
+   "inicio": 31.176,
+   "fim": 31.316
+  },
+  {
+   "texto": "que",
+   "inicio": 31.316,
+   "fim": 31.476
+  },
+  {
+   "texto": "pensa",
+   "inicio": 31.476,
+   "fim": 31.696
+  },
+  {
+   "texto": "por",
+   "inicio": 31.696,
+   "fim": 31.896
+  },
+  {
+   "texto": "você",
+   "inicio": 31.896,
+   "fim": 32.296
+  },
+  {
+   "texto": "e",
+   "inicio": 32.296,
+   "fim": 32.616
+  },
+  {
+   "texto": "pela",
+   "inicio": 32.616,
+   "fim": 32.896
+  },
+  {
+   "texto": "sua",
+   "inicio": 32.896,
+   "fim": 33.056
+  },
+  {
+   "texto": "empresa.",
+   "inicio": 33.056,
+   "fim": 33.476
+  },
+  {
+   "texto": "O",
+   "inicio": 33.735,
+   "fim": 33.855
+  },
+  {
+   "texto": "que",
+   "inicio": 33.855,
+   "fim": 33.995
+  },
+  {
+   "texto": "postar,",
+   "inicio": 33.995,
+   "fim": 34.575
+  },
+  {
+   "texto": "por",
+   "inicio": 34.855,
+   "fim": 35.015
+  },
+  {
+   "texto": "que",
+   "inicio": 35.015,
+   "fim": 35.175
+  },
+  {
+   "texto": "postar,",
+   "inicio": 35.175,
+   "fim": 35.735
+  },
+  {
+   "texto": "para",
+   "inicio": 35.815,
+   "fim": 36.095
+  },
+  {
+   "texto": "quem",
+   "inicio": 36.095,
+   "fim": 36.375
+  },
+  {
+   "texto": "e",
+   "inicio": 36.375,
+   "fim": 36.635
+  },
+  {
+   "texto": "com",
+   "inicio": 36.635,
+   "fim": 36.795
+  },
+  {
+   "texto": "qual",
+   "inicio": 36.795,
+   "fim": 37.035
+  },
+  {
+   "texto": "objetivo",
+   "inicio": 37.035,
+   "fim": 37.475
+  },
+  {
+   "texto": "você",
+   "inicio": 37.475,
+   "fim": 37.815
+  },
+  {
+   "texto": "está",
+   "inicio": 37.815,
+   "fim": 37.935
+  },
+  {
+   "texto": "fazendo",
+   "inicio": 37.935,
+   "fim": 38.195
+  },
+  {
+   "texto": "aquele",
+   "inicio": 38.195,
+   "fim": 38.395
+  },
+  {
+   "texto": "post?",
+   "inicio": 38.395,
+   "fim": 38.715
+  },
+  {
+   "texto": "Se",
+   "inicio": 39.073,
+   "fim": 39.233
+  },
+  {
+   "texto": "você",
+   "inicio": 39.233,
+   "fim": 39.393
+  },
+  {
+   "texto": "está",
+   "inicio": 39.393,
+   "fim": 39.533
+  },
+  {
+   "texto": "cansada",
+   "inicio": 39.533,
+   "fim": 40.193
+  },
+  {
+   "texto": "de",
+   "inicio": 40.193,
+   "fim": 40.373
+  },
+  {
+   "texto": "postar",
+   "inicio": 40.373,
+   "fim": 40.893
+  },
+  {
+   "texto": "e",
+   "inicio": 40.893,
+   "fim": 41.053
+  },
+  {
+   "texto": "não",
+   "inicio": 41.053,
+   "fim": 41.193
+  },
+  {
+   "texto": "vê",
+   "inicio": 41.193,
+   "fim": 41.333
+  },
+  {
+   "texto": "retorno",
+   "inicio": 41.333,
+   "fim": 41.653
+  },
+  {
+   "texto": "nenhum,",
+   "inicio": 41.653,
+   "fim": 42.053
+  },
+  {
+   "texto": "me",
+   "inicio": 42.413,
+   "fim": 42.553
+  },
+  {
+   "texto": "chama",
+   "inicio": 42.553,
+   "fim": 42.753
+  },
+  {
+   "texto": "no",
+   "inicio": 42.753,
+   "fim": 42.853
+  },
+  {
+   "texto": "Direct,",
+   "inicio": 42.853,
+   "fim": 43.133
+  },
+  {
+   "texto": "vamos",
+   "inicio": 43.573,
+   "fim": 43.773
+  },
+  {
+   "texto": "conversar?",
+   "inicio": 43.773,
+   "fim": 44.253
+  }
+ ]
+}

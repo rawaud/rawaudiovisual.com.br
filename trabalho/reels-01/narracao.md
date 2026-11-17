@@ -1,4 +1,4 @@
-# Reels 01: narração (aguardando aprovação)
+# Reels 01: narração (aprovada)
 
 Fonte: `originais/IMG_8360.MOV` (fala direta, take único). Transcrição com tempo por palavra: `originais/IMG_8360.transcricao.json`.
 Nenhuma frase repetida, então não houve descarte de tentativas. Pausas de ~0,5 s serão encurtadas para ~0,2 s. Silêncio final cortado.

@@ -30,7 +30,7 @@
 - **Inspiradora:** motiva e mostra o que é possível.
 - Vale para ganchos, textos na tela e sugestões de roteiro.
 
-## 7. Estilo escolhido (prévia em aprovação)
+## 7. Estilo escolhido (aprovado)
 - **Gancho:** opção B: título branco em caixa alta, Montserrat Black, numa tarja vermelho escuro (`#5F0405`), no topo, dentro da área segura, nos 2 primeiros segundos. Entra com um pulo, com **whoosh**.
 - **Legenda:** opção A: até 3 palavras no terço inferior, branca, Montserrat ExtraBold. Entra com um pequeno pulo.
 - **Palavra-chave:** opção B: aparece **sozinha**, em **CAIXA ALTA**, grande, Montserrat Black, vermelho escuro com brilho branco, na altura do peito (centro da tela). Entra "caindo" do grande para o normal, com **click**.
