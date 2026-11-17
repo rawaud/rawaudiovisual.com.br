@@ -1,4 +1,4 @@
-# Meu estilo: síntese das referências (aguardando aprovação)
+# Meu estilo: síntese das referências (aprovado)
 
 Um ponto de cada referência, adaptado à minha identidade (`identidade.md`). Nenhuma linha é cópia de uma criadora só.
 

@@ -5,3 +5,8 @@ export const { fontFamily: MONTSERRAT } = loadFont("normal", {
   weights: ["400", "500", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
 });
+
+loadFont("italic", {
+  weights: ["500", "800", "900"],
+  subsets: ["latin", "latin-ext"],
+});
