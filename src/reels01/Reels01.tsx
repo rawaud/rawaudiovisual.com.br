@@ -18,11 +18,13 @@ import dados from "./dados.json";
 
 const VIDEO = staticFile("trabalho/reels01.mp4");
 const GANCHO = "EU NÃO VENDO MAIS SÓ UM POST";
-const DURACAO_GANCHO = 2; // s
+// O gancho repete a 1ª frase ("Eu não vendo mais só um post"): essas palavras
+// não ganham legenda, e o gancho fica na tela até o primeiro corte.
+const PALAVRAS_DO_GANCHO = 7;
+const DURACAO_GANCHO = dados.segmentos[0].ate - dados.segmentos[0].de; // s
 
 // Palavras-chave aprovadas (palavra + segundo aproximado no vídeo final)
 const CHAVES: { palavra: string; aprox: number }[] = [
-  { palavra: "post", aprox: 2 },
   { palavra: "resultado", aprox: 13 },
   { palavra: "faturamento", aprox: 18 },
   { palavra: "isolado", aprox: 20 },
@@ -47,7 +49,9 @@ type Palavra = {
 const limpar = (t: string) => t.toLowerCase().replace(/[^\p{L}]/gu, "");
 
 const PALAVRAS: Palavra[] = (() => {
-  const ps: Palavra[] = dados.palavras.map((p) => ({ ...p }));
+  const ps: Palavra[] = dados.palavras
+    .slice(PALAVRAS_DO_GANCHO)
+    .map((p) => ({ ...p }));
   for (const c of CHAVES) {
     let melhor = -1;
     ps.forEach((p, i) => {
@@ -62,24 +66,33 @@ const PALAVRAS: Palavra[] = (() => {
   return ps;
 })();
 
-// Grupos de até 3 palavras; quebra no fim de frase; palavra-chave sempre sozinha
+// Linhas de até 3 palavras, seguindo as pausas da fala (vírgula/ponto) e sem
+// sobrar palavra sozinha (4 → 2+2, 5 → 3+2, 7 → 3+2+2). Palavra-chave sempre sozinha.
 const GRUPOS: Palavra[][] = (() => {
   const out: Palavra[][] = [];
-  let g: Palavra[] = [];
-  const fecha = () => {
-    if (g.length) out.push(g);
-    g = [];
+  let trecho: Palavra[] = [];
+  const quebrar = () => {
+    const n = trecho.length;
+    if (!n) return;
+    const linhas = Math.ceil(n / 3);
+    let i = 0;
+    for (let l = 0; l < linhas; l++) {
+      const tam = Math.ceil((n - i) / (linhas - l));
+      out.push(trecho.slice(i, i + tam));
+      i += tam;
+    }
+    trecho = [];
   };
   for (const p of PALAVRAS) {
     if (p.chave) {
-      fecha();
+      quebrar();
       out.push([p]);
       continue;
     }
-    g.push(p);
-    if (g.length === 3 || /[.,?!:]$/.test(p.texto)) fecha();
+    trecho.push(p);
+    if (/[.,?!:]$/.test(p.texto)) quebrar();
   }
-  fecha();
+  quebrar();
   return out;
 })();
 
@@ -152,31 +165,29 @@ const Gancho: React.FC = () => {
 };
 
 // ---------- Legenda (estilo A) e palavra-chave (estilo B) ----------
-const PalavraLegenda: React.FC<{ p: Palavra }> = ({ p }) => {
+// Grupo de até 3 palavras aparece inteiro de uma vez (fade rápido), tamanho constante
+const LinhaLegenda: React.FC<{ g: Palavra[] }> = ({ g }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  // tamanho sempre igual: entra só com fade e uma leve subida
-  const t = interpolate(frame, [0, 0.12 * fps], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const opacidade = interpolate(frame, [0, 2], [0, 1], { extrapolateRight: "clamp" });
   return (
-    <span
+    <div
       style={{
-        display: "inline-block",
-        margin: "0 11px",
+        position: "absolute",
+        left: AREA_SEGURA.laterais + 30,
+        right: AREA_SEGURA.laterais + 30,
+        bottom: AREA_SEGURA.base + 330,
+        textAlign: "center",
         fontFamily: FONTE,
         fontWeight: 800,
         fontSize: 72,
         lineHeight: 1.1,
         color: BRANCO,
         textShadow: SOMBRA_BRANCA,
-        opacity: t,
-        transform: `translateY(${(1 - t) * 14}px)`,
+        opacity: opacidade,
       }}
     >
-      {semPontuacao(p.texto)}
-    </span>
+      {g.map((p) => semPontuacao(p.texto)).join(" ")}
+    </div>
   );
 };
 
@@ -226,25 +237,7 @@ const Legendas: React.FC = () => {
             {unica ? (
               <PalavraChave p={g[0]} />
             ) : (
-              <div
-                style={{
-                  position: "absolute",
-                  left: AREA_SEGURA.laterais + 30,
-                  right: AREA_SEGURA.laterais + 30,
-                  bottom: AREA_SEGURA.base + 330,
-                  textAlign: "center",
-                }}
-              >
-                {g.map((p, k) => (
-                  <Sequence
-                    key={k}
-                    from={Math.round(p.inicio * fps) - de}
-                    layout="none"
-                  >
-                    <PalavraLegenda p={p} />
-                  </Sequence>
-                ))}
-              </div>
+              <LinhaLegenda g={g} />
             )}
           </Sequence>
         );
@@ -273,7 +266,7 @@ export const Reels01: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: "black", overflow: "hidden" }}>
       <Segmentos />
       <Legendas />
-      <Sequence durationInFrames={DURACAO_GANCHO * fps} layout="none">
+      <Sequence durationInFrames={Math.round(DURACAO_GANCHO * fps)} layout="none">
         <Gancho />
       </Sequence>
       <Sons />
