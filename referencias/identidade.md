@@ -10,7 +10,11 @@
 - Variação vem do peso/tamanho (ex.: títulos e palavras-chave mais pesados, conectivos mais leves).
 
 ## 3. Legenda
-A definir (palavra por palavra ou frase inteira, posição, como o destaque aparece).
+- **Dinâmica, de 1 a 3 palavras por vez**, entrando na hora exata em que cada palavra é falada.
+- Branca (`#FFFFFF`), Montserrat.
+- Palavras-chave em destaque com o vermelho escuro (`#5F0405`) — forma do destaque: a definir.
+- **Palavras-chave ganham efeito sonoro** no momento em que aparecem (efeitos em `assets/sons/`).
+- Posição: terço inferior, sempre dentro da área segura (acima dos 126 px da base, sem tapar o rosto).
 
 ## 4. Ritmo
 A definir.
