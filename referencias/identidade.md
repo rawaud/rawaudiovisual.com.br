@@ -6,8 +6,8 @@
 - Cor para telas lisas (respiros): a definir
 
 ## 2. Fontes
-- Título: a definir
-- Legenda: a definir
+- **Montserrat para tudo** (Google Fonts): títulos e legendas.
+- Variação vem do peso/tamanho (ex.: títulos e palavras-chave mais pesados, conectivos mais leves).
 
 ## 3. Legenda
 A definir (palavra por palavra ou frase inteira, posição, como o destaque aparece).

@@ -1,3 +1,5 @@
+import { MONTSERRAT } from "./fontes";
+
 // Formato fixo do projeto: Reels vertical 9:16
 export const LARGURA = 1080;
 export const ALTURA = 1920;
@@ -20,7 +22,7 @@ export const IDENTIDADE = {
     destaque: "#5F0405",
   },
   fontes: {
-    titulo: "serif",
-    legenda: "sans-serif",
+    titulo: MONTSERRAT,
+    legenda: MONTSERRAT,
   },
 } as const;
