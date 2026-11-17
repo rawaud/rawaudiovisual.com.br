@@ -12,7 +12,7 @@
 ## 3. Legenda
 - **Dinâmica, de 1 a 3 palavras por vez**, entrando na hora exata em que cada palavra é falada.
 - Branca (`#FFFFFF`), Montserrat.
-- Palavras-chave em destaque com o vermelho escuro (`#5F0405`) — forma do destaque: a definir.
+- Palavras-chave com a **letra em vermelho escuro** (`#5F0405`). Para continuar legível em cenas escuras, usar uma sombra/contorno clara e sutil atrás da letra vermelha (aprovar no quadro parado).
 - **Palavras-chave ganham efeito sonoro** no momento em que aparecem (efeitos em `assets/sons/`).
 - Posição: terço inferior, sempre dentro da área segura (acima dos 126 px da base, sem tapar o rosto).
 
