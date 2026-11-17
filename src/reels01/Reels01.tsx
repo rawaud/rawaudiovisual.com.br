@@ -21,14 +21,13 @@ const GANCHO = "EU NÃO VENDO MAIS SÓ UM POST";
 const DURACAO_GANCHO = 2; // s
 
 // Palavras-chave aprovadas (palavra + segundo aproximado no vídeo final)
-const CHAVES: { palavra: string; aprox: number; telaCheia?: boolean }[] = [
+const CHAVES: { palavra: string; aprox: number }[] = [
   { palavra: "post", aprox: 2 },
   { palavra: "resultado", aprox: 13 },
   { palavra: "faturamento", aprox: 18 },
   { palavra: "isolado", aprox: 20 },
   { palavra: "estratégia", aprox: 30 },
   { palavra: "objetivo", aprox: 37 },
-  { palavra: "direct", aprox: 43, telaCheia: true },
 ];
 
 const { legenda: BRANCO, destaque: VERMELHO } = IDENTIDADE.paleta;
@@ -43,7 +42,6 @@ type Palavra = {
   inicio: number;
   fim: number;
   chave?: boolean;
-  telaCheia?: boolean;
 };
 
 const limpar = (t: string) => t.toLowerCase().replace(/[^\p{L}]/gu, "");
@@ -59,7 +57,6 @@ const PALAVRAS: Palavra[] = (() => {
     });
     if (melhor >= 0) {
       ps[melhor].chave = true;
-      ps[melhor].telaCheia = c.telaCheia;
     }
   }
   return ps;
@@ -158,7 +155,11 @@ const Gancho: React.FC = () => {
 const PalavraLegenda: React.FC<{ p: Palavra }> = ({ p }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const s = spring({ frame, fps, config: { damping: 12, mass: 0.6 } });
+  // tamanho sempre igual: entra só com fade e uma leve subida
+  const t = interpolate(frame, [0, 0.12 * fps], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
   return (
     <span
       style={{
@@ -170,7 +171,8 @@ const PalavraLegenda: React.FC<{ p: Palavra }> = ({ p }) => {
         lineHeight: 1.1,
         color: BRANCO,
         textShadow: SOMBRA_BRANCA,
-        transform: `scale(${interpolate(s, [0, 1], [0.6, 1])})`,
+        opacity: t,
+        transform: `translateY(${(1 - t) * 14}px)`,
       }}
     >
       {semPontuacao(p.texto)}
@@ -210,36 +212,6 @@ const PalavraChave: React.FC<{ p: Palavra }> = ({ p }) => {
   );
 };
 
-// Pedido final: palavra ocupa a tela inteira por um instante (respiro)
-const TelaCheia: React.FC<{ p: Palavra }> = ({ p }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const s = spring({ frame, fps, config: { damping: 13 } });
-  return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: VERMELHO,
-        justifyContent: "center",
-        alignItems: "center",
-        opacity: interpolate(frame, [0, 3], [0, 1], { extrapolateRight: "clamp" }),
-      }}
-    >
-      <div
-        style={{
-          fontFamily: FONTE,
-          fontWeight: 900,
-          fontSize: 210,
-          color: BRANCO,
-          textTransform: "uppercase",
-          transform: `scale(${interpolate(s, [0, 1], [1.4, 1])})`,
-        }}
-      >
-        {semPontuacao(p.texto)}
-      </div>
-    </AbsoluteFill>
-  );
-};
-
 const Legendas: React.FC = () => {
   const { fps } = useVideoConfig();
   return (
@@ -252,11 +224,7 @@ const Legendas: React.FC = () => {
         return (
           <Sequence key={i} from={de} durationInFrames={ate - de} layout="none">
             {unica ? (
-              g[0].telaCheia ? (
-                <TelaCheia p={g[0]} />
-              ) : (
-                <PalavraChave p={g[0]} />
-              )
+              <PalavraChave p={g[0]} />
             ) : (
               <div
                 style={{

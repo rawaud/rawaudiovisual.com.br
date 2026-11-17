@@ -35,3 +35,5 @@
 - **Legenda:** opção A: até 3 palavras no terço inferior, branca, Montserrat ExtraBold. Entra com um pequeno pulo.
 - **Palavra-chave:** opção B: aparece **sozinha**, em **CAIXA ALTA**, grande, Montserrat Black, vermelho escuro com brilho branco, na altura do peito (centro da tela). Entra "caindo" do grande para o normal, com **click**.
 - Código: `src/estilos/Previa.tsx` (composição `EstiloEscolhido`).
+- **Legenda com tamanho constante:** as palavras entram só com fade e uma leve subida, sem crescer (pedido no Reels 01).
+- **Não usar palavra em tela cheia** (fundo vermelho ocupando a tela) no pedido final. Ela não gostou; o CTA fica como legenda normal.
