@@ -17,7 +17,9 @@
 - Posição: terço inferior, sempre dentro da área segura (acima dos 126 px da base, sem tapar o rosto).
 
 ## 4. Ritmo
-A definir.
+- Formato principal: **vídeo falado**. A maior parte do tempo é a pessoa falando para a câmera.
+- B-roll e inserções (prints, palavras gigantes, cartões) só como apoio, curtos e pontuais, quando pedidos.
+- Para não ficar parado: proposta de cortes secos para tirar pausas e leves aproximações (zoom) em frases importantes — sempre mostrar em prévia antes de fixar.
 
 ## 5. Som
 A definir.
