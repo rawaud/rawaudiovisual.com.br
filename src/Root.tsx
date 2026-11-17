@@ -18,11 +18,11 @@ export const RemotionRoot: React.FC = () => {
         height={ALTURA}
       />
     ))}
-    {/* Estilo escolhido: gancho do B + legenda do A */}
+    {/* Estilo escolhido: gancho do B + legenda do A + palavra-chave do B */}
     <Composition
       id="EstiloEscolhido"
       component={PreviaEstilo}
-      defaultProps={{ opcao: "A" as const, titulo: "B" as const, legenda: "A" as const }}
+      defaultProps={{ opcao: "A" as const, titulo: "B" as const, legenda: "A" as const, chave: "B" as const }}
       durationInFrames={FPS * 5}
       fps={FPS}
       width={LARGURA}

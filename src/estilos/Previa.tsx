@@ -41,12 +41,14 @@ const BRILHO_CHAVE =
   "0 0 26px rgba(255,255,255,1), 0 0 12px rgba(255,255,255,1), 0 0 4px rgba(255,255,255,1)";
 const SOMBRA_BRANCA = "0 3px 14px rgba(0,0,0,0.45)";
 
-const grupos = (tamanho: number) => {
+const grupos = (tamanho: number, isolarChave = false) => {
   const out: Palavra[][] = [];
   for (let i = 0; i < FALA.length; ) {
     // palavra-chave fecha o grupo (fica por último, maior)
     const g: Palavra[] = [];
     while (i < FALA.length && g.length < tamanho) {
+      // palavra-chave sozinha na tela: fecha o grupo anterior antes dela
+      if (isolarChave && FALA[i].chave && g.length > 0) break;
       g.push(FALA[i]);
       i++;
       if (g[g.length - 1].chave) break;
@@ -240,14 +242,20 @@ const PalavraAnimada: React.FC<{
   );
 };
 
-const Legendas: React.FC<{ opcao: Opcao }> = ({ opcao }) => {
+const Legendas: React.FC<{ opcao: Opcao; chave: Opcao }> = ({
+  opcao,
+  chave,
+}) => {
   const { fps } = useVideoConfig();
-  const lista = grupos(opcao === "B" ? 1 : 3);
+  const isolar = chave !== opcao;
+  const lista = grupos(opcao === "B" ? 1 : 3, isolar);
   return (
     <>
       {lista.map((g, i) => {
         const de = Math.round(g[0].inicio * fps);
         const ate = Math.round((lista[i + 1]?.[0].inicio ?? FIM) * fps);
+        const estilo: Opcao =
+          isolar && g.length === 1 && g[0].chave ? chave : opcao;
         return (
           <Sequence key={i} from={de} durationInFrames={ate - de} layout="none">
             <div
@@ -256,8 +264,8 @@ const Legendas: React.FC<{ opcao: Opcao }> = ({ opcao }) => {
                 left: AREA_SEGURA.laterais + 30,
                 right: AREA_SEGURA.laterais + 30,
                 // B: centro da tela; A/C: terço inferior, acima da área dos botões
-                top: opcao === "B" ? 1060 : undefined,
-                bottom: opcao === "B" ? undefined : AREA_SEGURA.base + 330,
+                top: estilo === "B" ? 1060 : undefined,
+                bottom: estilo === "B" ? undefined : AREA_SEGURA.base + 330,
                 textAlign: "center",
               }}
             >
@@ -267,7 +275,7 @@ const Legendas: React.FC<{ opcao: Opcao }> = ({ opcao }) => {
                   from={Math.round(p.inicio * fps) - de}
                   layout="none"
                 >
-                  <PalavraAnimada p={p} opcao={opcao} />
+                  <PalavraAnimada p={p} opcao={estilo} />
                 </Sequence>
               ))}
             </div>
@@ -282,7 +290,8 @@ export const PreviaEstilo: React.FC<{
   opcao: Opcao;
   titulo?: Opcao;
   legenda?: Opcao;
-}> = ({ opcao, titulo = opcao, legenda = opcao }) => {
+  chave?: Opcao; // estilo da palavra-chave (pode ser diferente da legenda)
+}> = ({ opcao, titulo = opcao, legenda = opcao, chave = legenda }) => {
   const { fps } = useVideoConfig();
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
@@ -290,7 +299,7 @@ export const PreviaEstilo: React.FC<{
       <Sequence durationInFrames={2 * fps} layout="none">
         <Titulo opcao={titulo} />
       </Sequence>
-      <Legendas opcao={legenda} />
+      <Legendas opcao={legenda} chave={chave} />
       {/* whoosh na entrada do gancho, click em cada palavra-chave */}
       <Audio src={staticFile("sons/whoosh.wav")} volume={0.6} />
       {FALA.filter((p) => p.chave).map((p) => (
