@@ -23,8 +23,9 @@
 
 ## 5. Som
 - **Música de fundo bem baixinha**, instrumental, sem letra, só para dar clima por baixo da voz (a voz sempre em primeiro plano).
-- **Efeitos sonoros nas palavras-chave**, no momento em que a palavra aparece. Arquivos em `assets/sons/`; se não houver, sugerir opções gratuitas de uso livre para ela ouvir e aprovar.
+- **Efeitos sonoros nas palavras-chave**, no momento em que a palavra aparece. Preferidos: **whoosh** e **click**. Arquivos em `assets/sons/`; se não houver, sugerir opções gratuitas de uso livre para ela ouvir e aprovar.
 - Música e efeitos sempre aprovados antes do vídeo final.
 
 ## 6. Tom de voz
-A definir.
+- **Inspiradora:** motiva e mostra o que é possível.
+- Vale para ganchos, textos na tela e sugestões de roteiro.
