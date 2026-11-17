@@ -278,15 +278,19 @@ const Legendas: React.FC<{ opcao: Opcao }> = ({ opcao }) => {
   );
 };
 
-export const PreviaEstilo: React.FC<{ opcao: Opcao }> = ({ opcao }) => {
+export const PreviaEstilo: React.FC<{
+  opcao: Opcao;
+  titulo?: Opcao;
+  legenda?: Opcao;
+}> = ({ opcao, titulo = opcao, legenda = opcao }) => {
   const { fps } = useVideoConfig();
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
       <Fundo />
       <Sequence durationInFrames={2 * fps} layout="none">
-        <Titulo opcao={opcao} />
+        <Titulo opcao={titulo} />
       </Sequence>
-      <Legendas opcao={opcao} />
+      <Legendas opcao={legenda} />
       {/* whoosh na entrada do gancho, click em cada palavra-chave */}
       <Audio src={staticFile("sons/whoosh.wav")} volume={0.6} />
       {FALA.filter((p) => p.chave).map((p) => (

@@ -18,6 +18,16 @@ export const RemotionRoot: React.FC = () => {
         height={ALTURA}
       />
     ))}
+    {/* Estilo escolhido: gancho do B + legenda do A */}
+    <Composition
+      id="EstiloEscolhido"
+      component={PreviaEstilo}
+      defaultProps={{ opcao: "A" as const, titulo: "B" as const, legenda: "A" as const }}
+      durationInFrames={FPS * 5}
+      fps={FPS}
+      width={LARGURA}
+      height={ALTURA}
+    />
     <Composition
       id="Reels"
       component={Reels}

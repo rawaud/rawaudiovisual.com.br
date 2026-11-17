@@ -29,3 +29,8 @@
 ## 6. Tom de voz
 - **Inspiradora:** motiva e mostra o que é possível.
 - Vale para ganchos, textos na tela e sugestões de roteiro.
+
+## 7. Estilo escolhido (prévia em aprovação)
+- **Gancho:** opção B: título branco em caixa alta, Montserrat Black, numa tarja vermelho escuro (`#5F0405`), no topo, dentro da área segura, nos 2 primeiros segundos. Entra com um pulo, com **whoosh**.
+- **Legenda:** opção A: até 3 palavras no terço inferior, branca, Montserrat ExtraBold. Palavra-chave maior (1,6×), Montserrat Black, vermelho escuro com brilho branco. Entra com um pequeno pulo; palavra-chave com **click**.
+- Código: `src/estilos/Previa.tsx` (composição `EstiloEscolhido`).
