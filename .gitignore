@@ -1,0 +1,8 @@
+node_modules/
+out/
+.DS_Store
+# Vídeos e áudios pesados não vão para o git
+originais/*
+!originais/.gitkeep
+entregas/*
+!entregas/.gitkeep
