@@ -15,9 +15,9 @@ export const AREA_SEGURA = {
 // Ver referencias/identidade.md
 export const IDENTIDADE = {
   paleta: {
-    fundo: "#F2EEEA",
-    texto: "#2B2222",
-    destaque: "#C9A27E",
+    fundo: "#5F0405", // provisório para telas lisas, até a definição
+    legenda: "#FFFFFF",
+    destaque: "#5F0405",
   },
   fontes: {
     titulo: "serif",

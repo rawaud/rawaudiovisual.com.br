@@ -14,7 +14,7 @@ export const Reels: React.FC<{ mostrarAreaSegura?: boolean }> = ({
           alignItems: "center",
           fontFamily: IDENTIDADE.fontes.titulo,
           fontSize: 96,
-          color: IDENTIDADE.paleta.texto,
+          color: IDENTIDADE.paleta.legenda,
         }}
       >
         Meus Reels
